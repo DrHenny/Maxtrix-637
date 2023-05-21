@@ -15,7 +15,7 @@ import java.util.HashMap;
 public final class MapContainersXteas {
 
 	private final static HashMap<Integer, int[]> mapContainersXteas = new HashMap<Integer, int[]>();
-	private final static String PACKED_PATH = "data/map/containersXteas/packed.mcx";
+	private final static String PACKED_PATH = "data/map/packed.mcx";
 
 	public static final int[] getMapContainerXteas(int regionId) {
 		return mapContainersXteas.get(regionId);
@@ -53,7 +53,7 @@ public final class MapContainersXteas {
 		try {
 			DataOutputStream out = new DataOutputStream(new FileOutputStream(
 					PACKED_PATH));
-			File unpacked = new File("data/map/containersXteas/unpacked/");
+			File unpacked = new File("data/map/unpacked/");
 			File[] xteasFiles = unpacked.listFiles();
 			for (File region : xteasFiles) {
 				String name = region.getName();
